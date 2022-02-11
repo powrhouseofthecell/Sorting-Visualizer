@@ -13,10 +13,16 @@
 
 > This project is written in JavaScript using P5js library. The UI is really simple and working on this project was really fun. The website is hosted live using GitHub Pages.. you can check it out **[here](https://sajidfayaz.github.io/sortingvisualizer)**
 
+## Dependencies
+
+<ul>
+  <li>Tailwind CSS</li>
+</ul>
+
 ## Usage
 
 ```sh
-Just open the index.html file with any browser.
+  npm i build:css
 ```
 
 ## Authors
