@@ -1,8 +1,8 @@
 // Hold all the buttons that are in the navbar inside this variable
-const navItems = document.querySelector("#navItems").childNodes;
+const navItems = document.querySelector('#navItems').childNodes;
 
 // Select the Sort button
-const sortArray = document.querySelector("#sortArray");
+const sortArray = document.querySelector('#sortArray');
 
 // Select the button which will generate a new array on click
 const generateNewArr = document.querySelector('#generateNewArray');
@@ -16,10 +16,10 @@ generateNewArr.addEventListener('click', () => {
 let selectedSort;
 
 // Highlight the selected sorting algorithm and save it in selectedSort
-navItems.forEach((item) => {
-   item.addEventListener("click", () => {
-      if(item.tagName === "A" && !item.disabled) {
-         item.classList.add("focus:text-red-500");
+navItems.forEach(item => {
+   item.addEventListener('click', () => {
+      if (item.tagName === 'A' && !item.disabled) {
+         item.classList.add('focus:text-red-500');
          selectedSort = item.childNodes[1].innerText;
          console.log(item.childNodes[1].innerText);
          console.log(item.classList);
@@ -28,27 +28,27 @@ navItems.forEach((item) => {
 });
 
 // When Sort button is clicked, run the selected sorting algorithm and disable all the buttons
-sortArray.addEventListener("click", async () => {
-   if(selectedSort === undefined) {
-      alert("Please select a sorting algorithm");
-   } else if (selectedSort.toLowerCase() === "bubble sort") {
+sortArray.addEventListener('click', async () => {
+   if (selectedSort === undefined) {
+      alert('Please select a sorting algorithm');
+   } else if (selectedSort.toLowerCase() === 'bubble sort') {
       lockAllButtons();
       await bubbleSort(arr, states);
       releaseLock();
-      console.log("hurray");
-   } else if(selectedSort.toLowerCase() === "selection sort") {
+      console.log('hurray');
+   } else if (selectedSort.toLowerCase() === 'selection sort') {
       lockAllButtons();
       await selectionSort(arr, states);
       releaseLock();
-   } else if(selectedSort.toLowerCase() === "insertion sort") {
+   } else if (selectedSort.toLowerCase() === 'insertion sort') {
       lockAllButtons();
       await insertionSort(arr, states);
       releaseLock();
-   } else if(selectedSort.toLowerCase() === "merge sort") {
+   } else if (selectedSort.toLowerCase() === 'merge sort') {
       lockAllButtons();
       await mergeSort(arr, states, 0, arr.length - 1);
       releaseLock();
-   } else if(selectedSort.toLowerCase() === "quick sort") {
+   } else if (selectedSort.toLowerCase() === 'quick sort') {
       lockAllButtons();
       await quickSort(arr, states, 0, arr.length - 1);
       releaseLock();
@@ -56,15 +56,15 @@ sortArray.addEventListener("click", async () => {
 });
 
 // lock all buttons
-let lockAllButtons = () =>  {
-   navItems.forEach((item) => {
+let lockAllButtons = () => {
+   navItems.forEach(item => {
       item.disabled = true;
    });
-}
+};
 
 // release lock on all buttons
 let releaseLock = () => {
-   navItems.forEach((item) => {
+   navItems.forEach(item => {
       item.disabled = false;
    });
-}
+};
