@@ -6,8 +6,9 @@ let states = [];
 
 //p5js setup() method
 function setup() {
-   let canv = createCanvas(1000, 500);
-   console.log(canv);
+   // let canv = createCanvas(1000, 500);
+   let canv = createCanvas(windowWidth, 500);
+   // console.log(canv);
    // place canvas inside a div
    canv.parent('canvasContainer');
 

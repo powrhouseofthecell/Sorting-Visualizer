@@ -737,3 +737,14 @@ Ensure the default browser behavior of the `hidden` attribute.
       flex-direction: row;
    }
 }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 251px) {
+}
+@media (min-width: 642px) {
+}
+@media (min-width: 961px) {
+}
+@media (min-width: 1025px) {
+}
